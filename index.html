@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+<body>
+
+
+<form id="myForm">
+  <label for="fname"></label>
+  <table>
+    <tr>
+      <th><img src="45799.png" alt=""></th>
+      <th><input type="" name="1" id="1"></th>
+      <th><input type="" name="2" id="2"></th>
+      <th><input type="text" name="3" id="3"></th>
+      <th><input type="text" name="4" id="4"></th>
+      
+    </tr>
+    <tr>
+      <th><input type="text" name="5" id="5"></th>
+      <th name="15" id="15">x</th>
+      <th name="16" id="16">x</th>
+      <th name="17" id="17">x</th>
+      <th name="18" id="18">x</th>
+
+    </tr>
+    <tr>
+      <th><input type="text" name="6" id="6"></th>
+      <th name="25" id="25">x</th>
+      <th name="26" id="26">x</th>
+      <th name="27" id="27">x</th>
+      <th name="28" id="28">x</th>
+    </tr>
+    <tr>
+      <th><input type="text" name="7" id="7"></th>
+      <th name="35" id="35">x</th>
+      <th name="36" id="36">x</th>
+      <th name="37" id="37">x</th>
+      <th name="38" id="38">x</th>
+    </tr>
+    <tr>
+      <th><input type="text" name="8" id="8"></th>
+      <th name="45" id="45">x</th>
+      <th name="46" id="46">x</th>
+      <th name="47" id="47">x</th>
+      <th name="48" id="48">x</th>
+    </tr>
+  
+  </table><br>
+
+  <button>button</button>
+
+</form>
+
+<p id="result"></p>
+
+<script>
+  document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // prevent page reload
+
+    let numberOne = parseFloat(document.getElementById("fname").value);
+    let numberTwo = parseFloat(document.getElementById("lname").value);
+
+
+    document.getElementById("result").innerText = "Result: " + result;
+  });
+</script>
+
+</body>
+</html>
