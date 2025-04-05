@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form id="myForm">
+  <label for="fname">Number one:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+
+  <button type="submit" value="multiplication" name="operation">Multiplication</button><br>
+  <button type="submit" value="plus" name="operation">Plus</button><br>
+  <button type="submit" value="minus" name="operation">Minus</button><br>
+  <button type="submit" value="division" name="operation">Division</button><br>
+
+  <br>
+  <label for="lname">Number two:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+</form>
+
+<p id="result"></p>
+
+<script>
+  document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // prevent page reload
+
+    let numberOne = parseFloat(document.getElementById("fname").value);
+    let numberTwo = parseFloat(document.getElementById("lname").value);
+    let operation = event.submitter.value; // Get the value of the clicked button
+
+    let result;
+
+    switch (operation) {
+      case "multiplication":
+        result = numberOne * numberTwo;
+        break;
+      case "plus":
+        result = numberOne + numberTwo;
+        break;
+      case "minus":
+        result = numberOne - numberTwo;
+        break;
+      case "division":
+        result = numberOne / numberTwo;
+        break;
+      default:
+        result = "Invalid operation";
+    }
+
+    document.getElementById("result").innerText = "Result: " + result;
+  });
+</script>
+
+</body>
+</html>

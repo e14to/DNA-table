@@ -7,7 +7,7 @@
 
 
 <form id="myForm">
-  <label for="fname"></label>
+  <label for="fname" id="fname"></label>
   <table>
     <tr>
       <th><img src="45799.png" alt=""></th>
@@ -17,6 +17,7 @@
       <th><input type="text" name="4" id="4"></th>
       
     </tr>
+    <label for="lname" id="lname"></label>
     <tr>
       <th><input type="text" name="5" id="5"></th>
       <th name="15" id="15">x</th>
@@ -49,23 +50,13 @@
   
   </table><br>
 
-  <button>button</button>
+  <button type="button" value="calculate" name="calculate">calculate</button>
 
 </form>
 
-<p id="result"></p>
+<p id="result">.</p>
 
-<script>
-  document.getElementById("myForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // prevent page reload
-
-    let numberOne = parseFloat(document.getElementById("fname").value);
-    let numberTwo = parseFloat(document.getElementById("lname").value);
-
-
-    document.getElementById("result").innerText = "Result: " + result;
-  });
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
